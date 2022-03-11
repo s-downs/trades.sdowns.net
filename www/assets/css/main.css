@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+div.fullpage-top {
+    height: 100vh;
+    background-color: black;
+    background-image: url("/assets/img/fullpage-bg.webp");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 0 0 3px black;
+}
+
+header {
+    padding: 1rem;
+    color: white;
+}
+
+div.logo {
+    display: inline-block;
+    position: relative;
+    border: white solid 0.4rem;
+    border-bottom-style: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+div.logo:after {
+    content: '';
+    width: calc( 100% + 0.8rem );
+    height: 0.4rem;
+    background-image: linear-gradient(to right, #ffff 0%, #ffff 5%, #fff0 12%, #fff0 88%, #ffff 95%, #ffff 100% );
+    position: absolute;
+    bottom: -0.4rem;
+    left: -0.4rem;
+}
+
+div.logo .mainline {
+    text-transform: uppercase;
+}
+
+div.logo .italicised {
+    font-style: italic;
+}
+
+div.logo .subline {
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header menu {
+    float: right;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    overflow-y: hidden;
+}
+
+header menu ul li {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 .5rem;
+}
+
+header menu ul li a {
+    padding: 1rem .5rem;
+    text-decoration: none;
+    color: white;
+}
+
+div.fullpage-content {
+    flex-grow: 5;
+}
+
+div.fullpage-content-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.fullpage-content-container .tempt {
+    width: 30%;
+    padding: 1rem;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    display: flex;
+}
+
+div.fullpage-content-container .tempt .sign {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.fullpage-content-container .tempt .sign svg {
+    color: black;
+    width: 2rem;
+    height: 2rem;
+    justify-content: center;
+}
+
+div.fullpage-content-container .tempt .text-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 5;
+    padding-left: 1rem;
+}
+
+div.fullpage-content-container .tempt .mainline {
+    font-size: 1.5rem;
+}
+
+div.fullpage-top div.arrow {
+    margin: 1rem;
+    color: white;
+    height: 5rem;
+    position: relative;
+}
+
+div.fullpage-top div.arrow svg {
+    height: 3rem;
+    width: 5rem;
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+    transform: translateX( -50% );
+}
+
+div.fullpage-top div.arrow svg.popper {
+    animation-name: popper-fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+div.fullpage-content-container a {
+    text-decoration: none;
+    color: #DDD;
+}
+
+.container {
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h1 {
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.mtt-profile {
+    margin: 1rem 0;
+    display: flex;
+}
+
+.mtt-profile img {
+    max-height: 300px;
+    height: 100%;
+}
+
+.mtt-profile .align-right {
+    order: 5;
+}
+
+.mtt-profile div {
+    padding: 0 1rem;
+    flex-grow: 5;
+}
+
+h2 {
+    font-family: 'Kanit', sans-serif;
+}
+
+.contact-method {
+    margin: 1rem 0;
+    position: relative;
+}
+
+.contact-method .method, .contact-method .info {
+    display: inline-block;
+    width: 49%;
+}
+
+.contact-method .method {
+    text-align: right;
+    vertical-align: top;
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    padding-right: 1rem;
+}
+
+.contact-method .info {
+    padding-top: 1rem;
+}
+
+form label {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 0.25rem;
+}
+
+form textarea {
+    height: 10rem;
+}
+
+div.g-recaptcha {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+}
+
+.grey-bg {
+    background-color: #EEE;
+}
+
+.centered {
+    text-align: center;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+header .menu-toggle {
+    display: none;
+}
+
+header .menu-toggle svg {
+    height: 3rem;
+    width: 3rem;
+}
+
+
+@media screen and ( max-width: 1100px ) {
+    header {
+        text-align: center;
+    }
+
+    header menu {
+        float: none;
+    }
+
+    div.fullpage-content-container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    div.fullpage-content-container .tempt {
+        width: 80%;
+    }
+
+    .contact-method .method {
+        width: 30%;
+    }
+
+    .contact-method .info {
+        width: 69%;
+    }
+}
+
+@media screen and ( max-width: 840px ) {
+    header {
+        text-align: left;
+    }
+
+    header menu {
+        display: none;
+        text-align: center;
+    }
+
+    header .menu-toggle {
+        display: inline-block;
+        float: right;
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+
+    .mtt-profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mtt-profile .img-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mtt-profile .align-right {
+        order: initial;
+    }
+
+    .contact-method .method, .contact-method .info {
+        width: 100%;
+    }
+
+    .contact-method .method {
+        text-align: left;
+    }
+}
+
+@media screen and ( max-width: 480px ) {
+    div.logo {
+        font-size: 0.75rem;
+    }
+
+    header menu {
+        margin-top: 0.5rem;
+    }
+
+    div.fullpage-content-container .tempt {
+        width: 100%;
+    }
+
+    .mtt-profile img {
+        height: initial;
+        width: 80%;
+    }
+}
+
+@keyframes popper-fade {
+    from {
+        top: 1rem;
+        color: #FFFF;
+    }
+    to {
+        top: 0.5rem;
+        color: #FFF0;
+    }
+}
